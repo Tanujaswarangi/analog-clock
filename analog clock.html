@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #clock{
+        position: relative;
+        width:280px;
+        height:250px;
+        border-radius: 50%;
+        border: 15px solid black;
+        font-size: 30px;
+        background-color:rgb(231, 231, 236);
+        color: rgb(0, 0, 0);
+        box-shadow: 2px 2px 8px 8px rgb(0, 0, 0);
+        margin-top:150px;
+    }
+    #t1,#t2,#t3,#t4,#t5,#t6,#t7,#t8,#t9,#t10,#t11,#t12{
+        position:absolute;
+    }
+    #t1{
+        top:20px;
+        left:205px;
+    }
+    #t2{
+        top:60px;
+        left:240px;
+    }
+    #t3{
+        top:110px;
+        left:255px;
+    }
+    #t4{
+        top:165px;
+        left:235px;
+    }
+    #t5{
+        top:205px;
+        left:195px;
+    }
+    #t6{
+        top:215px;
+        left:130px;
+    }
+    #t7{
+        top:205px;
+        left:75px;
+    }
+    #t8{
+        top:180px;
+        left:35px;
+    }
+    #t9{
+        top:135px;
+        left:15px;
+    }
+    #t10{
+        top:80px;
+        left:7px;
+    }
+    #t11{
+        top:30px;
+        left:40px;
+    }
+    #t12{
+        top:4px;
+        left:117px;
+    }
+#b1{
+    width:0px;
+    height:90px;
+    position: absolute;
+    border: 2px solid rgb(15, 13, 13);
+    top:35px;
+    left:135px;
+    transform-origin: bottom;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+ font-family: Arial, Helvetica, sans-serif;
+
+    
+}
+#b2{
+    width:0px;
+    height:70px;
+    position: absolute;
+    border: 2px solid  blue;
+    top:55px;
+    left:135px;
+    transform-origin: bottom;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    
+}
+
+#b3{
+    width:0px;
+    height:50px;
+    position: absolute;
+    border: 2px solid rgb(151, 33, 33);
+    top:75px;
+    left:140px;
+    transform-origin: bottom;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    
+}
+.hands {
+    position: absolute;
+    border-radius: 5px;
+    width: 10px;
+    height: 10px;
+    border: 2px rgb(0, 0, 0) solid;
+    top:125px;
+    left:133px;
+    background-color:rgb(0, 0, 0);
+
+}
+body{
+    background-color: rgb(29, 109, 109);
+}
+
+    </style>
+</head>
+
+<body>
+  <center>  <div id="clock" >
+        <div id="t1">1</div>
+        <div id="t2">2</div>
+        <div id="t3">3</div>
+        <div id="t4">4</div>
+        <div id="t5">5</div>
+        <div id="t6">6</div>
+        <div id="t7">7</div>
+        <div id="t8">8</div>
+        <div id="t9">9</div>
+        <div id="t10">10</div>
+        <div id="t11">11</div>
+        <div id="t12">12</div>
+
+       
+
+         <div id="b1"></div>
+          <div id="b2"></div>
+         <div id="b3"></div>
+         <div class="hands">
+</div>
+    </div></center>
+</body>
+<script>
+    setInterval(()=> {
+var date= new Date();
+var rh=date.getHours();
+var rm=date .getMinutes();
+var rs=date .getSeconds();
+document.getElementById("b1").style.transform = `rotate(${6 * rs}deg)`;
+document.getElementById("b2").style.transform = `rotate(${6 * rm}deg)`;
+document.getElementById("b3").style.transform = `rotate(${30 * rh + rm / 2}deg)`;
+
+},1000)
+
+</script>
+</html>
